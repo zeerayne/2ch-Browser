@@ -29,7 +29,7 @@ public class NavigationService {
             this.navigateBoardPage(context, null, website.name(), urlParser.getBoardName(uri), urlParser.getBoardPageNumber(uri), preferDeserialized);
         } else if (urlParser.isThreadUri(uri)) {
             this.navigateThread(context, null, website.name(), urlParser.getBoardName(uri), urlParser.getThreadNumber(uri), null, urlParser.getPostNumber(uri), preferDeserialized);
-        } else if (UriUtils.isImageUri(uri) || UriUtils.isWebmUri(uri)) {
+        } else if (UriUtils.isImageUri(uri) || UriUtils.isVideoUri(uri)) {
             this.navigateActivity(context, BrowserActivity.class, uri, null, flags);
         } else {
             this.navigateBoardList(context, website.name(), false);
